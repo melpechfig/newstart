@@ -9,3 +9,41 @@ a:visited {
 a {
   color: #6699ff;
 }
+
+.column {
+    float: left;
+    width: 50%
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: ""
+    display: table;
+    clear:both;
+}
+
+.column2 {
+    float:left;
+}
+.column2.left {
+    width: 25%;
+}
+.column2.right {
+    width: 75%;
+}
+/* Clear floats after the columns */
+.row2:after {
+    content: ""
+    display: table;
+    clear:both;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width:100%;
+    }
+}
+
+img {
+  border-radius: 50%;
+}
