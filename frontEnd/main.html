@@ -1,0 +1,25 @@
+<div>
+    <h1>Projects</h1>
+<!-- cards -->
+    <div fclass = 'md-padding' layout='row' layout-wrap>
+        <md-card style="width: 300px;" ng-repeat="p in projects">
+            <a href="#/project_page/{{p}}">
+                <img src="http://placehold.it/200X200" class="md-card-image">
+            </a>
+            
+            <md-card-content>
+                <a href="#/project_page/{{p}}">
+            <h2>Project {{p}}</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                </a>
+            </md-card-content>
+            
+        <div class="md-actions" layout="row" layout-align="end center">
+            <md-button href="#/project_page/{{p}}">View 
+            </md-button>
+            <md-button>Save</md-button>
+        </div>
+
+        </md-card>
+    </div>
+</div>
