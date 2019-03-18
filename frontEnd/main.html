@@ -1,25 +1,29 @@
-<div>
-    <center>
-    <h1>Projects</h1>
-    </center>
+<div layout-padding layout="column" layout-align="space-around center">
+    <div>
+        <center>
+        <h1>Projects</h1>
+        </center>
+    </div>
 <!-- cards -->
-    <div fclass = 'md-padding' layout='row' layout-wrap layout-align='center'>
-        <md-card style="width: 300px;" ng-repeat="p in projects">
-            <a href="#/project_page/{{p}}">
-                <img src="http://placehold.it/300X300" class="md-card-image">
-            </a>
-            
-            <md-card-content>
+    <div style=" margin:auto; max-width:1300px">
+        <div layout='row' layout-wrap layout-align='center'>
+            <md-card style="width: 300px;" ng-repeat="p in projects">
                 <a href="#/project_page/{{p}}">
-            <h2>Project {{p}}</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    <img src="http://placehold.it/300X300" class="md-card-image">
                 </a>
-            </md-card-content>
-        <div class="md-actions" layout="row" layout-align="end center">
-            <md-button href="#/project_page/{{p}}">View 
-            </md-button>
-            <md-button>Save</md-button>
+
+                <md-card-content>
+                    <a href="#/project_page/{{p}}">
+                <h2>Project {{p}}</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    </a>
+                </md-card-content>
+            <div class="md-actions" layout="row" layout-align="end center">
+                <md-button href="#/project_page/{{p}}">View 
+                </md-button>
+                <md-button>Save</md-button>
+            </div>
+            </md-card>
         </div>
-        </md-card>
     </div>
 </div>
