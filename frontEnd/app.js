@@ -6,15 +6,15 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
 
     $routeProvider
         .when('/', {
-            templateUrl: '/pages/main.html',
+            templateUrl: 'main.html',
             controller: 'MainController'
         })
         .when('/project_page/:num', {
-            templateUrl: 'pages/project_page.html',
+            templateUrl: 'project_page.html',
             controller: 'project_page'
         })
         .otherwise({
-            templateUrl: 'pages/main.html',
+            templateUrl: 'main.html',
             controller: 'MainController'
         });
 });
