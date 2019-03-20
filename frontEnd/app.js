@@ -14,7 +14,7 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
             controller: 'project_page'
         })
         .otherwise({
-            templateUrl: 'main.html',
+            templateUrl: 'pages/main.html',
             controller: 'MainController'
         });
 });
