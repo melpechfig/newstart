@@ -13,6 +13,11 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
             templateUrl: 'project_page.html',
             controller: 'project_page'
         })
+        //Add routing for form
+        .when('/form', {
+            templateUrl: 'form.html', 
+            controller: 'form_controller'
+        })
         .otherwise({
             templateUrl: 'pages/main.html',
             controller: 'MainController'
@@ -24,10 +29,12 @@ function MainController($scope) {
     
     //To Do: Ability to Add Projects to list
 }
+
+//Main Controller
 MainController.$inject = ['$scope'];
 angular.module('app').controller('MainController', MainController);
 
-// Inline Annotation
+//Project Page Controller
 angular.module('app').controller('project_page', ['$scope', '$routeParams', '$http', '$log', function ($scope, $routeParams, $http, $log) {
     $scope.num = $routeParams.num;
  
@@ -37,6 +44,14 @@ angular.module('app').controller('project_page', ['$scope', '$routeParams', '$ht
         });
 }]);
 
+//Form Controller
+angular.module('app').controller('form_controller', ['$scope', '$routeParams', '$http', '$log', function ($scope, $routeParams, $http, $log) {
+    $scope.getFormData = function () {
+		alert("submitted");
+		console.log($scope.project);
+		//$window.location.href = '#/confirm';
+	}
+}]);
 // Clean code leads to:
 // Easier onboarding for new team members (or future self)
 // Easier debugging
